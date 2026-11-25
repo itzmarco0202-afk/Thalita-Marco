@@ -53,8 +53,42 @@ img{
 footer{padding:45px 20px;text-align:center}
 .hidden{display:none}
 .heart{color:#c77b8c;font-size:25px}
-</style>
+ .galeria{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:25px;
+ padding:25px;
+ background:#fffaf6;
+ border-radius:18px;
+}
+.galeria img{
+ width:100%;
+ max-width:none;
+ height:280px;
+ object-fit:cover;
+ background:white;
+ padding:10px 10px 35px;
+ border-radius:4px;
+ box-shadow:0 5px 15px rgba(0,0,0,0.12);
+ transition:transform 0.35s ease,box-shadow 0.35s ease;
+}
+.galeria img:nth-child(odd){
+ transform:rotate(-2deg);
+}
+.galeria img:nth-child(even){
+ transform:rotate(2deg);
+}
+.galeria img:hover{
+ transform:rotate(0deg) scale(1.04);
+ box-shadow:0 10px 25px rgba(0,0,0,0.18);
+}
+@media(max-width:600px){
+ .galeria{
+  grid-template-columns:1fr;
+ }
+}
 </head>
+ </style>
 <body>
 
 <div class="hero">
@@ -176,7 +210,7 @@ footer{padding:45px 20px;text-align:center}
 <section>
  <h2>Nossas lembranças ♥</h2>
  <p>Pedacinhos da nossa história que quero guardar para sempre.</p>
- <div class="card">
+ <div class="galeria">
   <img src="foto1.jpg" alt="Lembrança 1">
   <img src="foto2.jpg" alt="Lembrança 2">
   <img src="foto3.jpg" alt="Lembrança 3">
