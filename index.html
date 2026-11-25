@@ -88,6 +88,32 @@ footer{padding:45px 20px;text-align:center}
  }
 }
 </head>
+ .floating-heart{
+ position:fixed;
+ bottom:-30px;
+ color:#d88b9b;
+ font-size:20px;
+ opacity:0.55;
+ pointer-events:none;
+ z-index:0;
+ animation:flutuar 8s linear forwards;
+}
+@keyframes flutuar{
+ 0%{transform:translateY(0) rotate(0deg);opacity:0}
+ 15%{opacity:0.55}
+ 100%{transform:translateY(-105vh) rotate(25deg);opacity:0}
+}
+ 
+setInterval(()=>{
+ const heart=document.createElement("div");
+ heart.className="floating-heart";
+ heart.innerHTML="♥";
+ heart.style.left=Math.random()*100+"vw";
+ heart.style.animationDuration=(6+Math.random()*4)+"s";
+ document.body.appendChild(heart);
+ setTimeout(()=>heart.remove(),10000);
+},1200);
+
  </style>
 <body>
 
