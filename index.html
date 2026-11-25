@@ -181,6 +181,65 @@ setInterval(()=>{
  margin-top:160px;
  margin-bottom:180px;
 }
+ .timeline-section{
+ padding:40px 20px;
+ text-align:center;
+}
+
+.timeline{
+ max-width:700px;
+ margin:40px auto;
+ position:relative;
+}
+
+.timeline-item{
+ background:#fffaf6;
+ padding:25px;
+ margin:30px 0;
+ border-radius:15px;
+ box-shadow:0 4px 15px rgba(0,0,0,0.08);
+ border-left:5px solid #d88b9b;
+ position:relative;
+ text-align:left;
+ transition:transform 0.3s ease;
+}
+
+.timeline-item:hover{
+ transform:translateY(-5px);
+}
+
+.timeline-item h3{
+ color:#d47b91;
+ margin-top:0;
+}
+
+.timeline-item p{
+ color:#6b4650;
+ line-height:1.7;
+}
+ .timeline{
+ padding-left:25px;
+}
+
+.timeline-item::before{
+ content:"♥";
+ position:absolute;
+ left:-38px;
+ top:25px;
+ color:#d88b9b;
+ font-size:20px;
+}
+
+.timeline::before{
+ content:"";
+ position:absolute;
+ left:0;
+ top:0;
+ bottom:0;
+ width:3px;
+ background:#e8b7c2;
+ border-radius:10px;
+}
  </style>
 <body>
 
@@ -319,6 +378,32 @@ setInterval(()=>{
 </section>
  
 <section>
+ <section class="timeline-section">
+  <h2>O começo da nossa história ♥</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <h3>11 de fevereiro de 2023</h3>
+      <p>O dia em que nossos caminhos se cruzaram de uma maneira que mudou tanta coisa.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Nosso primeiro beijo ♥</h3>
+      <p>Um momento simples, mas que guardaria um significado enorme para nós.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Conhecendo a família</h3>
+      <p>Um passo importante, novas lembranças e mais capítulos sendo escritos.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Nossos sonhos</h3>
+      <p>Planos, desejos e tudo aquilo que ainda queremos construir ao longo da nossa história.</p>
+    </div>
+
+  </div>
+</section>
  <h2>Nossas lembranças ♥</h2>
  <p>Pedacinhos da nossa história que quero guardar para sempre.</p>
  <div class="galeria">
